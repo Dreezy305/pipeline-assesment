@@ -1,0 +1,27 @@
+{
+  "name": "pipeline-assesment",
+  "version": "1.0.0",
+  "description": "Build and deploy a very simple API that does the following",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dreezy305/pipeline-assesment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dreezy305/pipeline-assesment/issues"
+  },
+  "homepage": "https://github.com/Dreezy305/pipeline-assesment#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
