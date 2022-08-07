@@ -39,6 +39,12 @@ app.get("/howOld/:dob", (req, res) => {
       message: "There was an error, pls enter the correct format(YYYY-MM-DD)",
     });
   }
+  if (req.method !== "GET") {
+    res.status(415).json({
+      success: false,
+      message: "invalid method",
+    });
+  }
 });
 
 app.listen(port, () => {
