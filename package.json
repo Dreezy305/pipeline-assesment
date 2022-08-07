@@ -4,7 +4,8 @@
   "description": "Build and deploy a very simple API that does the following",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js node .",
+    "dev": "SET NODE_ENV=development&& node index.js"
   },
   "repository": {
     "type": "git",
