@@ -45,7 +45,7 @@ jobs:
       - name: Test Backend API
         run: |
           cd audits
-          npm audit-backend
+          npm run audit-backend
 
       - name: Report Audits
         if: always()
