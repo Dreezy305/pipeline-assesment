@@ -10,7 +10,15 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.get("/howOld/:dob", (req, res) => {
+const Limiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  max: 3,
+  message: "Too many calls, please try again after an hour",
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.get("/howOld/:dob", Limiter, (req, res) => {
   const birthday = req.params.dob;
   const regex = /^\d{4}-\d{2}-\d{2}$/;
 
