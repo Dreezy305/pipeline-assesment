@@ -11,12 +11,11 @@ app.get("/", (req, res) => {
 });
 
 const Limiter = rateLimit({
-  windowMs: 60 * 60 * 1000,
+  windowMs: 15 * 60 * 1000,
   max: 3,
   message: "Too many calls, please try again after an hour",
   standardHeaders: true,
   legacyHeaders: false,
-  skipFailedRequests: true,
 });
 
 app.get("/howOld/:dob", Limiter, (req, res) => {
