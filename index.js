@@ -16,6 +16,7 @@ const Limiter = rateLimit({
   message: "Too many calls, please try again after an hour",
   standardHeaders: true,
   legacyHeaders: false,
+  skipFailedRequests: true,
 });
 
 app.get("/howOld/:dob", Limiter, (req, res) => {
