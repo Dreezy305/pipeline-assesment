@@ -11,9 +11,9 @@ app.get("/", (req, res) => {
 });
 
 const Limiter = rateLimit({
-  windowMs: 100,
+  windowMs: 1,
   max: 3,
-  message: "Too many calls, please try again after an hour",
+  message: "Too many calls",
   standardHeaders: true,
   legacyHeaders: false,
 });
