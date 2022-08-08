@@ -54,5 +54,5 @@ jobs:
           track: "backend"
           server: https://api.sheetson.com/v2/sheets
           sheetid: 1TpZp5pXOGDNhODDvbbjEffXopljG0MPdLxl0RVFY3yo
-          token: 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
+          token: HXlur8K20ZpoB-6FNsnSUtj2kGoDqCDHDl8vZBdLtQCv9UFOVhMsM2IBwD8
           properties: ${{ github.workspace }}/properties.json
