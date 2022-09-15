@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const rateLimit = require("express-rate-limit");
+const redis = require("redis");
 const redisClient = redis.createClient();
 const port = process.env.PORT || 5000;
 
