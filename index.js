@@ -18,13 +18,13 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-const Limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 3,
-  message: "Too many calls",
-  standardHeaders: true,
-  legacyHeaders: false,
-});
+// const Limiter = rateLimit({
+//   windowMs: 15 * 60 * 1000,
+//   max: 3,
+//   message: "Too many calls",
+//   standardHeaders: true,
+//   legacyHeaders: false,
+// });
 
 const customRedisRateLimiter = async (req, res, next) => {
   await redisClient.connect();
