@@ -130,7 +130,7 @@ app.get("/howOld/:dob", (req, res) => {
   }
 });
 
-app.use(Limiter);
+app.use(customRedisRateLimiter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
